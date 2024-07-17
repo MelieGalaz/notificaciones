@@ -18,11 +18,16 @@ export const Footer = () => {
       >
         <a
           href="https://github.com/MelieGalaz?tab=repositories"
-          style={{ color: "#bdb6b6", fontSize: 20 }}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <FaGithub />
+          <FaGithub style={{ color: "#bdb6b6", fontSize: 20 }} />
         </a>
-        <a href="https://www.linkedin.com/in/mely-galaz-9638bb246/">
+        <a
+          href="https://www.linkedin.com/in/mely-galaz-9638bb246/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaLinkedin style={{ color: "#bdb6b6", fontSize: 20 }} />
         </a>
       </div>
