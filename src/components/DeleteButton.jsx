@@ -25,7 +25,9 @@ export const DeleteButton = () => {
           </span>
         </div>
       ) : (
-        <p>No tenes notificaciones</p>
+        <p style={{ fontSize: 15, textAlign: "center", fontWeight: 700 }}>
+          No tenes notificaciones
+        </p>
       )}
     </>
   );
