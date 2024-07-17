@@ -7,16 +7,43 @@ import { useContext } from "react";
 
 import { ContenedorNotificaciones } from "./ContenedorNotificaciones";
 import { NotificacionesContext } from "../../context/NotificacionesContext";
-export const Navbar = () => {
+export const Navbar = ({ toggleModal }) => {
   const { array, setArray, count, setCount } = useContext(
     NotificacionesContext
   );
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ height: "56px" }}>
-        <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+    <Box sx={{}}>
+      <AppBar
+        position="static"
+        sx={{
+          height: "56px",
+          backgroundColor: "#a233c1",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Toolbar
+          sx={{
+            maxWidth: "1000px",
+            width: "100%",
+            margin: "auto",
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{
+              flexGrow: 1,
+              fontWeight: "bold",
+              fontSize: "2rem",
+              fontFamily: "DM Serif Display",
+            }}
+          >
+            IconTouch
           </Typography>
 
           <ContenedorNotificaciones
@@ -24,6 +51,7 @@ export const Navbar = () => {
             setArray={setArray}
             count={count}
             setCount={setCount}
+            toggleModal={toggleModal}
           />
         </Toolbar>
       </AppBar>

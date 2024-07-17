@@ -1,15 +1,20 @@
-import { BiLike } from "react-icons/bi";
 import { useContext } from "react";
 import { NotificacionesContext } from "../context/NotificacionesContext";
+import { Box } from "@mui/material";
 
-export function LikeButton() {
+export function LikeButton({ Icon, notificationText, style = {} }) {
   const { handleChangeNotification } = useContext(NotificacionesContext);
+  const handleClick = () => {
+    handleChangeNotification(notificationText);
+  };
 
   return (
-    <BiLike
-      variant="text"
-      onClick={handleChangeNotification}
-      style={{ color: "orange" }}
-    ></BiLike>
+    <Box sx={{ display: "flex", justifyContent: "center", marginTop: "0" }}>
+      <Icon
+        variant="text"
+        onClick={handleClick}
+        style={{ fontSize: 35, marginTop: 0, cursor: "pointer", ...style }}
+      />
+    </Box>
   );
 }

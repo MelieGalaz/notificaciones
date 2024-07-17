@@ -1,18 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useState } from "react";
+
 import { Box, List, ListItemIcon } from "@mui/material";
 import { useContext } from "react";
 import { NotificacionesContext } from "../../context/NotificacionesContext";
 
 import { HiBellAlert } from "react-icons/hi2";
 
-export function ContenedorNotificaciones() {
+export function ContenedorNotificaciones({ toggleModal }) {
   const { count } = useContext(NotificacionesContext);
-  const [open, setOpen] = useState(true);
-
-  const handleClick = () => {
-    setOpen(!open);
-  };
 
   return (
     <Box>
@@ -22,10 +17,20 @@ export function ContenedorNotificaciones() {
         aria-labelledby="nested-list-subheader"
       >
         <ListItemIcon
-          sx={{ color: "white", display: "flex", alignItems: "flex-end" }}
+          sx={{
+            color: "white",
+            display: "flex",
+            alignItems: "flex-end",
+            fontSize: 20,
+            cursor: "pointer",
+          }}
         >
-          <HiBellAlert onClick={handleClick} />
-          {count <= 0 ? "" : <span>{count}</span>}
+          <HiBellAlert onClick={toggleModal} />
+          {count <= 0 ? (
+            ""
+          ) : (
+            <span style={{ fontSize: 15, marginBottom: 6 }}>{count}</span>
+          )}
         </ListItemIcon>
       </List>
     </Box>

@@ -9,9 +9,9 @@ export const NotificacionProvaider = ({ children }) => {
   const [array, setArray] = useState(getNotifications() || []);
   const [count, setCount] = useState(0);
 
-  const handleChangeNotification = () => {
+  const handleChangeNotification = (text = "te dio un like") => {
     const newNotification = {
-      notificacion: "te dio un like",
+      notificacion: text,
       id: uuidv4(),
       visto: false,
     };
@@ -62,6 +62,7 @@ export const NotificacionProvaider = ({ children }) => {
         setCount: setCount,
         handleChangeNotification: handleChangeNotification,
         handleDelete: handleDelete,
+
         handleSeen: handleSeen,
         useEffect: useEffect,
       }}
