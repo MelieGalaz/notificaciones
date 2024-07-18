@@ -14,7 +14,7 @@ import { DeleteButton } from "./DeleteButton";
 
 const style = {
   position: "absolute",
-  top: "56px",
+  top: { xs: "56px", md: "70px" },
   right: 0,
   width: "300px",
   minWidth: "30%",

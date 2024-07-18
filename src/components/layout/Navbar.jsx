@@ -13,11 +13,11 @@ export const Navbar = ({ toggleModal }) => {
   );
 
   return (
-    <Box sx={{}}>
+    <Box>
       <AppBar
         position="static"
         sx={{
-          height: "56px",
+          height: { xs: "56px", md: " 70px " },
           backgroundColor: "#a233c1",
           display: "flex",
           alignItems: "center",

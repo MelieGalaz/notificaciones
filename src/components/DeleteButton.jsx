@@ -17,6 +17,7 @@ export const DeleteButton = () => {
             cursor: "pointer",
             display: "flex",
             justifyContent: "center",
+            alignItems: "center",
           }}
         >
           <MdDeleteForever style={{ fontSize: 16, color: "blue" }} />
